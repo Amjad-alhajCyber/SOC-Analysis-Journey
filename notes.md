@@ -59,7 +59,7 @@ Documentation
 - Documentation is critical.
 - Continuous learning is part of the job.
 
-  ```mermaid
+```mermaid
 graph TB
     subgraph STAGE1 [" PHASE 1: DETECTION & INITIAL TRIAGE "]
         A["<b>1. Alert Generated</b>"] --> B["<b>2. Alert Triage</b>"]

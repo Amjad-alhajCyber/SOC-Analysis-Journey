@@ -58,3 +58,23 @@ Documentation
 - Every alert must be investigated.
 - Documentation is critical.
 - Continuous learning is part of the job.
+
+  ```mermaid
+graph TB
+    subgraph STAGE1 [" PHASE 1: DETECTION & INITIAL TRIAGE "]
+        A["<b>1. Alert Generated</b>"] --> B["<b>2. Alert Triage</b>"]
+    end
+    subgraph STAGE2 [" PHASE 2: INVESTIGATION & VALIDATION "]
+        B --> C["<b>3. Log Analysis</b>"]
+        C --> D{"<b>4. Threat Validation</b>"}
+    end
+    subgraph STAGE3 [" PHASE 3: INCIDENT RESPONSE "]
+        D -- Yes --> E["<b>5. Escalation</b>"]
+        E --> F["<b>6. Containment</b>"]
+    end
+    subgraph STAGE4 [" PHASE 4: CLOSURE & REMEDIATION "]
+        F --> G["<b>7. Incident Report</b>"]
+        G --> H["<b>8. Lessons Learned</b>"]
+    end
+    D -- No --> X["<b>Closed (False Positive)</b>"]
+```
